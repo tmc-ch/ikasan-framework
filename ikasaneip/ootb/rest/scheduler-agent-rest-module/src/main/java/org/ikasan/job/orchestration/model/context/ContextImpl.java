@@ -32,7 +32,9 @@ public class ContextImpl<CONTEXT extends Context, CONTEXT_PARAM, JOB extends Sch
     protected Integer contextVisualisationLevelDistance;
     protected Integer contextVisualisationNodeDistance;
     protected Integer visualisationFontSize;
-    protected Boolean renderLogicalBoundaries;
+    protected Boolean renderLogicalBoundaries = true;
+    protected Boolean useAutoLayout = true;
+    protected String userGeneratedLayout;
 
     @Override
     public String getName() {
@@ -257,6 +259,26 @@ public class ContextImpl<CONTEXT extends Context, CONTEXT_PARAM, JOB extends Sch
     @Override
     public void setRenderLogicalBoundaries(Boolean renderLogicalBoundaries) {
         this.renderLogicalBoundaries = renderLogicalBoundaries;
+    }
+
+    @Override
+    public Boolean isUseAutoLayout() {
+        return useAutoLayout;
+    }
+
+    @Override
+    public void setUseAutoLayout(Boolean useAutoLayout) {
+        this.useAutoLayout = useAutoLayout;
+    }
+
+    @Override
+    public String getUserGeneratedLayout() {
+        return userGeneratedLayout;
+    }
+
+    @Override
+    public void setUserGeneratedLayout(String userGeneratedLayout) {
+        this.userGeneratedLayout = userGeneratedLayout;
     }
 
     @Override
