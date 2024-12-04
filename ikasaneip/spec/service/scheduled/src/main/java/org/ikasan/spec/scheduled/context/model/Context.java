@@ -387,4 +387,35 @@ public interface Context<CONTEXT extends Context, CONTEXT_PARAM, JOB extends Sch
      * @param renderLogicalBoundaries true if logical boundaries should be rendered, false otherwise
      */
     void setRenderLogicalBoundaries(Boolean renderLogicalBoundaries);
+
+
+    /**
+     * Check if auto layout is used for visualizations within the context.
+     *
+     * @return true if auto layout is used, false otherwise
+     */
+    Boolean isUseAutoLayout();
+
+
+
+    /**
+     * Set whether auto layout should be used for visualizations.
+     *
+     * @param useAutoLayout true if auto layout should be used, false otherwise
+     */
+    void setUseAutoLayout(Boolean useAutoLayout);
+
+    /**
+     * Retrieves the user-generated layout for the context visualization.
+     *
+     * @return The user-generated layout as a String.
+     */
+    String getUserGeneratedLayout();
+
+    /**
+     * Sets the user-generated layout for the context visualization.
+     *
+     * @param userGeneratedLayout The layout string provided by the user to customize the context visualization layout.
+     */
+    void setUserGeneratedLayout(String userGeneratedLayout);
 }
